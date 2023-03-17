@@ -62,7 +62,11 @@ function Slider() {
             >
               <div
                 style={{
-                  background: `url(${data.imageUrls[0]}) center no-repeat`,
+                  background: `url(${
+                    data?.imageUrls?.length > 0 && data?.imageUrls[0]
+                      ? data?.imageUrls[0]
+                      : ''
+                  }) center no-repeat`,
                   backgroundSize: 'cover',
                 }}
                 className="swiperSlideDiv"
